@@ -6,5 +6,30 @@ can add multiple instrucyion in line using ";";
 and after theat the rest of string will continue if you want to print one slash than
 "\\"
 if two than "\\\\"
+ley word arguiments are called so because they are use a key word to enter args
+end key word is set to a value from  assignment operator and that would be what would be aappended after the print ends;
+print("one",end=" ")
+print("two");
+one two // will be printed
+sep is used to separate the separate between the args when outputed onto console like by def it ius set to " "
+print("my",name","is","khan",sep="-") #prints my-name-is-khan
+
+luterals are data whose value is represented by themselves for eg 111 means 111 only
+we can also refer to scientfic nptations in python As 3x10^24 = 3E24
+but remember the type of such a literal is always FLOAT
+
+**
+if any is float the resultant is float
+*
+if any is float the resultatnt is float
+/ 
+no matter what the resultant is  ALWAYS float
+// also known as int or floor devision take only the the value before the .
+7/3 2.something but 7//2=2
+%
+if any is float the eresulatant is float
+-
+can be binary and unary operator
+unary it can reall change the sign of the what ever
 
 
