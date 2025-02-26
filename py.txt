@@ -2,3 +2,9 @@ print()// cout
 ptiny("my name is", "khan");
 //valid
 can add multiple instrucyion in line using ";";
+\ is the escape cahracter to escap from string if it is followed by an "n" then a new line will be added and 
+and after theat the rest of string will continue if you want to print one slash than
+"\\"
+if two than "\\\\"
+
+
