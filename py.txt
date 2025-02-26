@@ -1,0 +1,4 @@
+print()// cout
+ptiny("my name is", "khan");
+//valid
+can add multiple instrucyion in line using ";";
