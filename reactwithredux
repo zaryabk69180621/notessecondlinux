@@ -1,0 +1,8 @@
+so redux will help us with state management of our react app
+redux is used for state management
+now i could be very difficult as a alot of boilerplate may be required
+so we instead use
+reduxtoolkit
+now this edux-toolkit is spearate package and to use it in react we use 
+reactredux
+which is the primarily used binfning method for binding a redux toolkit to the react app
