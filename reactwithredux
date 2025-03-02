@@ -6,3 +6,50 @@ reduxtoolkit
 now this edux-toolkit is spearate package and to use it in react we use 
 reactredux
 which is the primarily used binfning method for binding a redux toolkit to the react app
+
+THRE CORE CNCEPts:
+
+lets assume a cake shop
+here are the entities involved
+->SHOP itself
+-> shop keeper
+->customer
+assume taht you are the customer one day you got the shop with an intention o by cake
+you le the shopkeeper know hat you want a cake 
+you dont jump the shelkf and grab the cake
+instead you request and the shop keeper who checks for availibilyu and packs it and gen reciept and mark teh sale 
+so ina a nutshell
+
+FIRST COncept
+cakeshop scinaroi    |redux|        purpose
+shop                 |store|        hold state of your application
+intention to biycake |Action|       describe what happended
+(reduce cakes by 1)
+
+shopkeeper	     |reducer|	    
+
+
+
+*************************************so how do these concepts get implimwnted in code this is where three components come into the picture******************************************
+
+FIRST PRICIPLE: we are supposed to manage all of our state in a single store/object managed by redux like the cake shop if state is niumberof cake
+then:
+{
+cakeCount:10;
+}// is our store
+
+SECOND PRINCIPLE: the only way to change a state is to emit an action which is an object , that describes what happened, not allowed to directly update
+for example we are ot allowed to directly decrease the number of cakes like by taking cake on our own
+{
+type:BUY_CAKE
+}
+THIRD PRINCIPLE: to specify how the state tree is transformed by actions you write pure reducer
+reducer=(prev,action)=>{return newState}
+in cakeShop example it is :
+const reducer=(state,action)=>{
+if(action.type==BUY_Cake){
+return {state.cakeCount:state.cakeCount-1}}
+
+our JS app has subbed to the store which containes all of our states in an apbjevct to update a state it cant directly do it instead it has to dispatch an action 
+as a result of which the reducer updates teh state
+
