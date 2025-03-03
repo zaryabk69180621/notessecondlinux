@@ -53,3 +53,63 @@ return {state.cakeCount:state.cakeCount-1}}
 our JS app has subbed to the store which containes all of our states in an apbjevct to update a state it cant directly do it instead it has to dispatch an action 
 as a result of which the reducer updates teh state
 
+
+
+
+
+
+
+***********************************************************************************ACTIONS***************************************************************************************************
+so actions are the only way your application can communicate with your store
+actionsa re plain js objects
+they must also have a type prooerty 
+that is usuallly a string contant
+so now lets just create an action
+to sepcify a type, by conevntion we need to create a string to avoid typos
+like let buy_cake= "but_cake"
+
+{
+type:buy_cake,
+info:"we need"}
+it can also contain other attributes apart from type like indo as added above;
+
+-------------------------------------------------------------------------------------------------ACTION CREATER------------------------------------------------------------------------------
+an action creator is a function that returns this action
+function buy_cake(){
+return {
+type:buy_cake,
+info:"we need cake"};
+
+****************************************************************************************REDUCER**********************************************************************************************
+a reducer tells you how a state changes in a store an action only requires a state tp be changed by telling what happpened but the reduicer is actually responsible for changing teh state of the store;
+
+
+let initialstate={
+
+numberofcakes:10
+}
+
+function(prevstate=initialstate,action){
+switch(action.type){
+case "buy_cake":
+return {...state,numberOfCakes:state.umberofCakes-1}
+break;
+default:
+return state
+allo
+}
+
+
+*************************************************************************************STORE***************************************************************************************************
+so the action stpre has following properties
+-> it holds all of the states of our app
+-> it provides the getstate method which allows the states to be accessed
+-> it also provides the dispatch method which takes in the action argument and passes it to the reducer to 
+-> it provides asubcribe method that takes in as an argument, a function that gets aexuted evry time a state changes
+-> you can UNSUB to changes on  states by calling the function you get in return when the sub was called.
+-----------------------------------------------------------------------this is where we use redux library------------------------------------------------------------------------------------
+const redux= require("redux");
+
+
+
+
