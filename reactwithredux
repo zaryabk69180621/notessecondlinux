@@ -109,6 +109,61 @@ so the action stpre has following properties
 -> you can UNSUB to changes on  states by calling the function you get in return when the sub was called.
 -----------------------------------------------------------------------this is where we use redux library------------------------------------------------------------------------------------
 const redux= require("redux");
+NOW AFTER HAVING DECALRED ALL OF THE REST OF THE THING LIKE 
+function buyCake(){
+return {
+type:buy_cake}
+
+
+}
+
+let initalstate={
+numberofCakes:10}
+
+
+
+function reducer(state=initialsatate,action){
+swicth(action.type){
+case buy_cake:
+return {...state,
+numberofCakes:state.numberofCakes-1}
+
+};
+default:
+return state
+
+
+}
+
+
+
+
+let store= redux.createStore(reducer); // accepts the reducer function as param
+
+
+console.log(store.getstate();)// prints inital state as teh state has not been manipulate till now
+
+
+so now want our app to listenforchnages by sub
+
+const unsub=store.subscribe(()=>{console.log("changed state",store.getState())}); //this CB will get called every time state chnges
+
+
+
+
+
+//now we will manipulate the state
+
+
+store.dispatch(buycake());// buycake return an ction as such {type:"BUY_CAKE"}
+store.dispatch(buycake());
+store.dispatch(buycake());
+unsub();
+
+
+
+
+
 
 
 
