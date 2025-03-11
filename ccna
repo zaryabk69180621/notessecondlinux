@@ -1,0 +1,97 @@
+a network is a group of atleast two computers that share resources, now this resource could be any thing from just a file to printer to what not
+TOPOLOGY:
+is the way pcs are arranged in a network
+PHYSICAL TOPOLOGY:
+is the way pcs are arranged physically in a network
+LOGICAL TOPOLOGY:
+is the way the data flows in a network 
+
+NOW A very Simple kinf od netweork has two Node             A------------------------------B
+where A and B are the two nodes
+now it doesnt have quite a great use so instead what we ahve to do is that we move to bus topology
+
+
+
+A                  B                     D
+|                  |                     |
+|                  |                     |
+|------------------|---------------------|-------------
+
+                                         |
+                                         |
+                                         |
+                                         C
+                                         
+                                         
+Now these Typically provide a speed of 10BASE5 (10 Megabits of speed, base means that only one member can send traffic , 5 means 500meters length of cable) or 10BASE2 (which has 10 Megabits of speed base means only one sender and 2 means 180mteres of length)                                       
+the way we achived this topolgy is by have 10 bse 5 also known as thicknet cable be percied and attached to a tranciever and black spots on the thick net meant that we can attach our trancievers at those points
+ if the main bus brok down we would have terminated the whole network
+ 
+ 
+ 
+ in 10 basewe started having what we call as T connections  but still if teh main cable broke the whole network would be disabled, we would need terminators at the ends rto prevent the bouncing bak of signal 
+ and again base connections mean only one can speak ata atime
+ also, if 
+ this is also know as broadcaste
+ ----------------------------------------------------------------------------------STAR TOPOLOGY---------------------------------------------------------------------------------------------
+ now in the star topology we have multiple devices, all connected to a central hub
+ if any of the wire break the rest can communicate with wach other
+ remember in this we use hub
+ this HUB is a dumb device it just takes the incoming traffic and just replicates it , hence it is also called as multiport repeater
+ it doesnt take into account which mac address is intended to recive the signal it just replicates the data onto all the port exept of the incoming
+ ********* now in all of the topology we have dicussed so far if two pcs try to send info at one we get a  collision
+ in such a case we use CARRIER SENSE MULTIPLE ACCESS COLLISION DETECTOR it alows the devices ti wait for a while before resending the signal if an collision is detected
+ it works as follows
+ => make sure that the sender is ready
+ => check for whether the line is idle or not(by sending teh dummy data and checking for collision)
+ => send the data if a collision is detedcted stop teh transmission
+ => wait for a while before resending
+ => if no collision detected then we are good
+ **** it also looks like a star but acts like a bus
+ it also uses broadcaste as the message is sent to every one on the network
+ 
+ UNICASTE : 1:1 commincation
+ BROADCASTE: 1:all communication
+ Multicaste : 1: subgroup of all
+ **********************************************************************************BRIDGES***************************************************************************************************
+ bridges are intelligent they learn teh mac addresses of teh devices in the topology and only forward the traffice onto the ports based on where tehdevices are located
+ 
+ 
+ bridges differ from swicthes based on that bridges use software and CPU vs Switches that use simply hardware or what you might also call cjips to swtich between the ports
+ how wever bith switches and rbridges are intelligent enough to sense the mac addresses and forward the data accordingly
+ now this behavoir allow us to have lessser collisions 
+ 
+ 
+ in this case first the bridge sends the data to all the devices  but the one to which it is intended  but once t has realized that which device is present, on which port it only sends the data to that port, at this moment the mac tables has also been updated
+ 
+ unmanaged wicthes are unable to be modified/ configured according to the need, they alway operate as manufactured
+ in managed switches you could configure them , forexample you can setup a Virtual Local Area Network
+ 
+ -----------------------------------------------------------------------------------ROuters--------------------------------------------------------------------------
+ router is a device that allows our LAN to communicate with other networks (WANS)
+ for example you could use router of (startlink, DSL, 5G, Fiber) and connecte it tou your witch that holds toghtther all of you LAN and thus allow all you devices to share data
+ it routes your data to desitantion
+ so you can route from LAN to WAN and WAN to LAN on recievers end
+ 
+ each router has separate broadcaste  domain so if a broadcaste is sent to a router it will not be forwarfed to the WAN 
+ in the same way, if a broadcaste is recived by router it will not be forwarfed to teh comepelete LAN
+ npow in most of teh cases we have switches and routers on the same device like
+ 6 interface of swicthes and 2 or 1 interface of router
+ 
+ 
+ -------------------------------------------------------------------------------FireWalls*************---------------------------------------------------------------------
+ are used to limit the acces to your LAN for example it can be attached before teh router and it will detrmin whether the data from WAN(Internet) shall be allowed onto you LAN
+ ,for examole you can allow traffic from LAN to WAN but not from WAN t LAN or viceversa
+ no wfilre walls mostly hav IDS or IPS
+ 
+ IDS
+ only detcts and alerts the intrusion, doesnot block
+ IPS
+ goes a step further,it blocks the traffic
+ 
+ ----------------------------------------------------------------------------------ACCESS POINTS------------------------------------------------------------------------------
+ allow device to connect to networks wirelssly
+  so you 
+     wrieless device-----------------ACCESSPOINT-----------------SWICTCH---------------ROUTER -----------------WAN
+     no we can use the access point to access wicthed interface as well as routed ones
+     like google and locally connectedpc using phone wii

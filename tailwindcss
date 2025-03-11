@@ -1,1 +1,38 @@
 so tailwinf is a cool framework that you can use to style your webpages we would be using it along with our react
+----------------------------------------------------------------------------GRID----------------------------------------------------
+
+in grid we make by seeting parent as
+{
+display:grid
+}
+now you can specify a template using
+grid-template-column:33.3% 33.3% 33.3% 
+each element will be placed in one cell
+we can also have it like 1fr 2fr 1fr
+and then for each one individual child div we could have
+.child{
+grid-column-start:1,; grid-column-end:3} // it will occupy two cols
+
+grid-row-start:1;
+grid-row-end:3// daraw sthe elemnt the first two rows but if we want the subseding elemnt to start from where it had left than we must 
+succeedingdiv{
+grid-row-start:1;
+grid-row-end:3
+
+}
+
+2ndSuccedngdiv{
+grid-row-start:2;
+grid-row-end:3}
+
+now yo can nest those inside of the others 
+
+
+*********************************************************************************************************************************************************************************************
+
+justify-items:center // horiizontally shrinks it according to the size// adn justify it to the center
+align-items:end //vertically shrinks and aligns it vertically the inner content is only aligned/justified 
+
+
+
+

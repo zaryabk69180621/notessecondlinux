@@ -33,3 +33,40 @@ can be binary and unary operator
 unary it can reall change the sign of the what ever
 
 
+
+
+
+
+== is used to check equality
+<> <= >= you already know
+precednece is aleay given to < > over == !=
+******************************************************************************************condition statement********************************************************************************
+
+x= input("do  you want to eat it")
+if x=="yes":
+  print("serve the dish")
+
+
+
+following are essential
+if // key word
+: // for boy
+// the body must have atleast one blankspace
+
+
+else if is written is elif
+
+
+x=input("enter the opaerator");
+if x=="+":
+  print("added")
+elif x=="-": 
+  print("subracting")
+elif x=="*":
+  print("mutiply")
+else :
+  print("none")
+  
+  MAX(A,B,C) // FIND THE MAIMUN OF ABC
+  
+  
